@@ -1,6 +1,6 @@
-# NemestatsClient
+# NemeStatsClient
 
-An Elixir wrapper around the Nemestats API
+An Elixir wrapper around the [NemeStats API](http://docs.nemestatsapiversion2.apiary.io)
 
 ## Installation
 
