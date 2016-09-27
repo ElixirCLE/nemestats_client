@@ -13,9 +13,8 @@ defmodule NemeStats do
 
   def process_response_body(body) do
     body
-    |> JSX.decode
-#    |> Map.take(@expected_fields)
-#    |> Enum.map(fn({k, v}) -> {String.to_atom(k), v} end)
+    |> Poison.decode!
+    |> Map.take(@expected_fields)
+    |> Enum.map(fn({k, v}) -> {String.to_atom(k), v} end)
   end
 end
-

@@ -29,7 +29,7 @@ defmodule NemestatsClient.Mixfile do
   defp deps do
     [
       {:httpotion, "~> 3.0.0"},
-      {:exjsx, "~> 3.2.0"}
+      {:poison, "~> 2.0"}
     ]
   end
 end
