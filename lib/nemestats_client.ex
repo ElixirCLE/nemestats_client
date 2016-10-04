@@ -1,4 +1,8 @@
 defmodule NemeStatsClient do
+  @moduledoc """
+  Client for interacting with Nemestats.
+  """
+
   require NemeStats
 
   @games [
@@ -33,7 +37,8 @@ defmodule NemeStatsClient do
   end
 
   def pick_game(num_players) do
-    GamePicker.pick_game(@games, num_players)
+    @games
+    |> GamePicker.pick_game(num_players)
     |> Map.get(:name)
   end
 end

@@ -1,4 +1,21 @@
 defmodule NemeStats do
+  @moduledoc """
+  Nemestats.com API wrapper
+
+  Use this in clients to interact with Nemestats' API.
+
+  ## Examples
+
+  defmodule MyClient do
+    require NemeStats
+
+    def login(username, password) do
+      body = Poison.encode!(%{userName: username, password: password})
+      NemeStats.post("UserSessions/", [body: body]).body
+    end
+  end
+  """
+
   use HTTPotion.Base
 
   @expected_fields ~w(authenticationToken authenticationTokenExpirationDateTime)
