@@ -1,5 +1,7 @@
 # NemeStatsClient
 
+[![Build Status](https://travis-ci.org/ElixirCLE/nemestats_client.svg?branch=master)](https://travis-ci.org/ElixirCLE/nemestats_client)
+
 An Elixir wrapper around the [NemeStats API](http://docs.nemestatsapiversion2.apiary.io)
 
 ## Installation
