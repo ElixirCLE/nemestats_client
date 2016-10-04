@@ -1,6 +1,6 @@
-defmodule NemestatsClientTest do
+defmodule NemeStatsClientTest do
   use ExUnit.Case
-  doctest NemestatsClient
+  doctest NemeStatsClient
 
   test "the truth" do
     assert 1 + 1 == 2
