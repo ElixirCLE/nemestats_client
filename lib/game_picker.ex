@@ -48,12 +48,17 @@ defmodule GamePicker do
       ...> %Game{name: "Game3", min_players: 6, max_players: 12}]
       iex> GamePicker.pick_game(games, 5)
       %Game{name: "Game2", min_players: 4, max_players: 10}
+      
+      iex> games = [%Game{name: "Game1", min_players: 2, max_players: 4}]
+      iex> GamePicker.pick_game(games, 1)
+      nil
   """
   def pick_game(games_list, num_players) do
     games_list
     |> filter_min_players(num_players)
     |> filter_max_players(num_players)
-    |> Enum.random
+    |> Enum.take_random(1)
+    |> List.first
   end
 
   @doc """
