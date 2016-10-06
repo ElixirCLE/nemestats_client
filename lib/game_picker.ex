@@ -70,6 +70,11 @@ defmodule GamePicker do
       ...> %Game{name: "Game2", min_players: 3, max_players: 5}]
       iex> GamePicker.filter_min_players(games, 2)
       [%Game{name: "Game1", min_players: 2, max_players: 4}]
+
+      iex> games = [%Game{name: "Game1", min_players: 2, max_players: 4},
+      ...> %Game{name: "Game2", min_players: 3, max_players: 5}]
+      iex> GamePicker.filter_min_players(games, 3)
+      [%Game{name: "Game1", min_players: 2, max_players: 4}, %Game{name: "Game2", min_players: 3, max_players: 5}]
   """
   def filter_min_players(games_list, num_players) do
     Enum.filter(games_list, fn(game) -> Map.get(game, :min_players) <= num_players end)
@@ -84,6 +89,11 @@ defmodule GamePicker do
       ...> %Game{name: "Game2", min_players: 3, max_players: 5}]
       iex> GamePicker.filter_max_players(games, 5)
       [%Game{name: "Game2", min_players: 3, max_players: 5}]
+
+      iex> games = [%Game{name: "Game1", min_players: 2, max_players: 4},
+      ...> %Game{name: "Game2", min_players: 3, max_players: 5}]
+      iex> GamePicker.filter_min_players(games, 4)
+      [%Game{name: "Game1", min_players: 2, max_players: 4}, %Game{name: "Game2", min_players: 3, max_players: 5}]
   """
   def filter_max_players(games_list, num_players) do
     Enum.filter(games_list, fn(game) -> Map.get(game, :max_players) >= num_players end)
