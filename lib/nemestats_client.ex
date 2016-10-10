@@ -9,4 +9,8 @@ defmodule NemeStatsClient do
     body = Poison.encode!(%{userName: username, password: password})
     NemeStats.post("UserSessions/", [body: body]).body
   end
+
+  def player(gaming_group, player_id) do
+    NemeStats.get("GamingGroups/#{gaming_group}/PlayerStats/#{player_id}/").body
+  end
 end
