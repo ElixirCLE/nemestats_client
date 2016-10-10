@@ -1,4 +1,4 @@
-defmodule NemestatsClient.Mixfile do
+defmodule NemeStatsClient.Mixfile do
   use Mix.Project
 
   def project do
