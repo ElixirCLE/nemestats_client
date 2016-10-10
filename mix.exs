@@ -29,7 +29,6 @@ defmodule NemeStatsClient.Mixfile do
   defp deps do
     [
       {:credo, "~> 0.4", only: [:dev, :test]},
-      {:exml, "~> 0.1"},
       {:httpotion, "~> 3.0.0"},
       {:poison, "~> 2.0"}
     ]
