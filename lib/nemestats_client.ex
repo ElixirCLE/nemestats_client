@@ -10,7 +10,8 @@ defmodule NemeStatsClient do
     NemeStats.post("UserSessions/", [body: body]).body
   end
 
-  def player(gaming_group, player_id) do
+  def get_stats(:player, gaming_group, player_id) do
     NemeStats.get("GamingGroups/#{gaming_group}/PlayerStats/#{player_id}/").body
   end
+  def get_stats(_, _, _), do: nil
 end
