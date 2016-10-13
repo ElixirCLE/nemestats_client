@@ -15,4 +15,9 @@ defmodule NemeStatsClient do
   end
 
   def get_stats(_, _, _), do: nil
+
+  def get_games(gaming_group) do
+    NemeStats.get("GameDefinitions/?gamingGroupId=#{gaming_group}").body
+  end
+
 end
